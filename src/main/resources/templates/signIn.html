@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="signIn.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="shortcut icon" href="Безымянный.ico" type="image/x-icon">
+    <title>Sign In My Letters</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+</head>
+<body>
+    <div th:insert="blocks/header.html::header"></div>
+    <div class="block">
+        <div id="Logwin">
+            <div>
+                <h2 class="text">Авторизация</h2>
+            </div>
+            <div>
+                <form autocomplete="off" action="/entrance">
+                    <div class="marg">
+                        <label class="text" for="Logfield">Логин</label>
+                        <div>
+                            <input maxlength="32" class="field" id="Logfield" type="text" name="login">
+                        </div>
+                    </div>
+                    <div class="marg">
+                        <label class="text" for="Pasfield">Пароль</label>
+                        <div>
+                            <input maxlength="32" class="field" id="Pasfield" type="password" name="password">
+                        </div>
+                    </div>
+                    <div>
+                        <button class="marg button" id="button1" type="submit">Войти</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div>
+            <button class="button"><a id="Abutton2" href="registration.html">Регистрация</a></button>
+        </div>
+        <div>
+            <p style="color: red; font-weight: bold" th:text="${message}">
+            </p>
+        </div>
+    </div>
+</body>
+</html>
