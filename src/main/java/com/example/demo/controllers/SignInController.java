@@ -31,6 +31,14 @@ public class SignInController {
             model.addAttribute("message", "Пользователь с таким логином уже существует");
             return "registration";
         }
+        if (login == "") {
+            model.addAttribute("message", "Введите логин");
+            return "registration";
+        }
+        if (password == "") {
+            model.addAttribute("message", "Введите пароль");
+            return "registration";
+        }
         account.putIfAbsent(login, password);
         return "signIn";
     }

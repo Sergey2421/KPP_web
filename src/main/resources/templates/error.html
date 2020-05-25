@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>
+        Error Page!
+    </title>
+    <link rel="stylesheet" href="error.css">
+</head>
+<body>
+<div id="main">
+    <div class="err">
+        <h1 th:text="${errorCode}"></h1>
+        <h2 th:utext="${errorMessage}"></h2>
+        <h3 th:utext="${solution}"></h3>
+        <div></div>
+        <a href="/">Return to sign in</a>
+    </div>
+</div>
+</body>
+</html>
